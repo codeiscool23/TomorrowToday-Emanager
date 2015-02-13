@@ -1,0 +1,83 @@
+﻿@{ ViewBag.Title = "Home Page";}
+
+<div id="deptTableOutput">
+
+
+
+</div>
+
+<script id="deptTable" type="text/html">
+    <table>
+        <thead>
+            <th>Department</th>
+            <th></th>
+
+        </thead>
+        <tbody>
+            {{#each Department}}
+            <tr data-id={{Id}}>
+                <td>{{Name}}</td>
+                <td>
+                    <button class="editDepartment">Edit</button>
+                    <button class="deleteDepartment">Delete</button>
+                </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</script>
+
+
+
+@section scripts{
+    <script src="~/Scripts/handlebars.js"></script>
+    <script>
+
+        var DeptServer = (function () {
+            var deptApiUrl = '@Url.HttpRouteUrl("DefaultApi", new { httproute = "", Controller = "emanagerwebapi" })';
+           
+            $(document).ajaxError(function (event, xhr) {
+                alert(xhr.status + ":" + xhr.statusText);
+            });
+
+                var getDept = function () {
+                    return $.ajax(deptApiUrl);
+                };
+
+                return {
+                    getDept: getDept,
+                };            
+        }());
+
+        (function () {
+            var templates = {};
+
+            var compileTemplates = function () {
+                templates.deptTable = Handlebars.compile($("#deptTable").html());
+            };
+
+            var showAllDeparts = function (data) {
+                var output = templates.deptTable({ Department: data });
+                $("#deptTableOutput").html(output);
+            };
+
+            var refreshDepartments = function () {
+                
+                DeptServer.getDept().done(showAllDeparts);
+            };
+   
+
+
+
+            $(function () {
+                compileTemplates();
+                refreshDepartments();
+            });
+
+        }());
+    </script>
+
+
+}
+
+

@@ -1,0 +1,9 @@
+C:\Users\bscharfer\Documents\BenProjects\SPA\Emanager\Emanager.Core\bin\Debug\Emanager.Core.dll
+C:\Users\bscharfer\Documents\BenProjects\SPA\Emanager\Emanager.Core\bin\Debug\Emanager.Core.pdb
+C:\Users\bscharfer\Documents\BenProjects\SPA\Emanager\Emanager.Core\obj\Debug\Emanager.Core.dll
+C:\Users\bscharfer\Documents\BenProjects\SPA\Emanager\Emanager.Core\obj\Debug\Emanager.Core.pdb
+C:\Users\bscharfer\Documents\BenProjects\SPA\Emanager\Emanager.Core\bin\Debug\Emanager.Core.dll.config
+C:\Users\bscharfer\Documents\BenProjects\SPA\Emanager\Emanager.Core\bin\Debug\EntityFramework.dll
+C:\Users\bscharfer\Documents\BenProjects\SPA\Emanager\Emanager.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\bscharfer\Documents\BenProjects\SPA\Emanager\Emanager.Core\bin\Debug\EntityFramework.xml
+C:\Users\bscharfer\Documents\BenProjects\SPA\Emanager\Emanager.Core\bin\Debug\EntityFramework.SqlServer.xml
